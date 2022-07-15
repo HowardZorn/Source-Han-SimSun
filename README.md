@@ -16,6 +16,9 @@ And you should install them on Windows as administrator.
 ```
 pip3 install afdko fonttools
 ```
+- make (optional)
+
+It needs *nix environment. You can run the commands in Makefile if you are using Windows.
 
 # Several Issues
 

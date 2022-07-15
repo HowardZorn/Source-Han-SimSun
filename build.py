@@ -4,6 +4,7 @@ from fontTools.misc.xmlReader import XMLReader
 
 bold = ttLib.TTFont('DreamHanSerifCN-W19.ttf')
 regular = ttLib.TTFont('DreamHanSerifCN-W7.ttf')
+light = ttLib.TTFont('DreamHanSerifCN-W3.ttf')
 
 simsun = ttLib.TTFont()
 
@@ -44,3 +45,23 @@ with open('nsimsun_bold.xml', "rb") as f:
     bold['name'] = nsimsunbd['name']
 
 bold.save('nsimsunbd.ttf')
+
+simsunl = ttLib.TTFont()
+
+with open('simsun_light.xml', "rb") as f:
+    reader = XMLReader(f, simsunl)
+    reader.read()
+    reader.close()
+    light['name'] = simsunl['name']
+
+light.save('simsunl.ttf')
+
+nsimsunl = ttLib.TTFont()
+
+with open('nsimsun_light.xml', "rb") as f:
+    reader = XMLReader(f, nsimsunl)
+    reader.read()
+    reader.close()
+    light['name'] = nsimsunl['name']
+
+light.save('nsimsunl.ttf')
