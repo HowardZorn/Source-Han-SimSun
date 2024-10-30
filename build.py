@@ -2,7 +2,7 @@ import fontTools.ttLib as ttLib
 from fontTools.misc.xmlReader import XMLReader
 
 
-bold = ttLib.TTFont('DreamHanSerifCN-W19.ttf')
+bold = ttLib.TTFont('DreamHanSerifCN-W20.ttf')
 regular = ttLib.TTFont('DreamHanSerifCN-W7.ttf')
 light = ttLib.TTFont('DreamHanSerifCN-W3.ttf')
 
