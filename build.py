@@ -6,14 +6,12 @@ bold = ttLib.TTFont('DreamHanSerifCN-W20.ttf')
 regular = ttLib.TTFont('DreamHanSerifCN-W7.ttf')
 light = ttLib.TTFont('DreamHanSerifCN-W3.ttf')
 
-# Use typo metrics for line spacing
-# To enable USE_TYPO_METRICS flag in OS/2
-# set the 7th bit as True
-# Reference:
-# https://learn.microsoft.com/en-us/typography/opentype/spec/os2#fsselection
-bold["OS/2"].fsSelection |= 2**7
-regular["OS/2"].fsSelection |= 2**7
-light["OS/2"].fsSelection |= 2**7
+# Use typography metrics for line spacing.
+# To enable USE_TYPO_METRICS flag in OS/2, set the 8-th bit as 1.
+# Reference: https://learn.microsoft.com/en-us/typography/opentype/spec/os2#fsselection
+bold["OS/2"].fsSelection |= (1 << 7)
+regular["OS/2"].fsSelection |= (1 << 7)
+light["OS/2"].fsSelection |= (1 << 7)
 
 simsun = ttLib.TTFont()
 
