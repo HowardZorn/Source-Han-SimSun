@@ -22,7 +22,7 @@ It needs *nix environment. You can run the commands in Makefile if you are using
 
 # Several Issues
 
-- NSimSun should be monospace font
+- ~~NSimSun should be monospace font~~ (Fixed with 'hwid' hard substitution and drop 'liga' and 'dlig' feature in GSUB table)
 - ~~The single line spacing in MS Office is bigger than the original SimSun~~ (Fixed with [USE_TYPO_METRICS flag ON in OS/2 Table](https://learn.microsoft.com/en-us/typography/opentype/spec/os2#fsselection), which is flagged ON in SimSun as well.)
 
 # Standard Disclaimer
